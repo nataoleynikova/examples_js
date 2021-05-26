@@ -1,7 +1,7 @@
 // задание 1: увеличивать на 1
 function increment_int_1() {
-  let int_1 = document.getElementById('int_inc');
-  let num = ++int_1;
+  let int_1 = document.getElementById('int_inc').textContent;
+  let num = Number(int_1) + 1;
   document.getElementById('int_inc').innerHTML = num;
 }
 
@@ -33,7 +33,7 @@ function add_word() {
 
 // задание 5: по кругу менять значение id:mode на low/middle/high
 function change_word() {
-  for (20>1) {
+  for (;20>1;) {
     let mode_1 = 'low';
     document.getElementById('mode').innerHTML = mode_2;
     let mode_2 = 'middle';
@@ -44,14 +44,14 @@ function change_word() {
 }
 
 
-switch (change_word) {
-  case mode_1:
-    document.getElementById('mode').innerHTML = mode_2;
-  case mode_2:
-    document.getElementById('mode').innerHTML = mode_3;
-  case mode_3:
-    document.getElementById('mode').innerHTML = mode_1;
-}
+ //switch (change_word) {
+ // case mode_1:
+ //   document.getElementById('mode').innerHTML = mode_2;
+  //case mode_2:
+   // document.getElementById('mode').innerHTML = mode_3;
+  //case mode_3:
+   // document.getElementById('mode').innerHTML = mode_1;
+//}
 
 
 // задание 6: if mode = low: sum * 1; if mode = middle: sum * 2;
