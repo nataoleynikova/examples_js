@@ -59,13 +59,38 @@ function change_sum() {
   }
 }
 
+// задание 7: вывести четные числа от 0 до 26
+function test_circle() {
+  for (let i=0; i<=26; i+=2) {
+  // document.write(i + ' ');
+  console.log(i);
+  }
 
+  // document.getElementById('circle_id').innerHTML = circle;
+}
 
+// задание 8: массивы: объединение, вывод элемента, получение ключей
+function test_mass() {
+  let arr1 = [1, 2, 3];
+  let arr2 = [4, 5, 6];
 
+  let result = arr1.concat(arr2);
+  document.getElementById('mass').innerHTML = result;
 
+  let del = result.pop();
+  console.log(del);
+  // new_element.setAttribute("id", "output");
+  // new_element.innerHTML = del;
+  // mass.after(del);
 
+  console.log(Object.keys(result));
+  console.log(Object.keys(del));
+}
 
+// задание 9: рекурсия: вычислить сумму до данного
+function sum_to(n) {
+  if (n == 1) return 1;
+  return n + sum_to(n - 1);
+}
 
-
-
-
+console.log(sum_to(5));
