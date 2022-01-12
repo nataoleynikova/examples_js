@@ -25,10 +25,10 @@ function add_word() {
   let word1 = document.getElementById('word1').textContent;
   let word2 = document.getElementById('word2').textContent;
   let add = word1 + ' ' + '+' + ' ' + word2;
+  let sum_words = document.getElementById('sum_words')
   let new_element = document.createElement('div');
-  new_element.setAttribute("id", "output");
   new_element.innerHTML = add;
-  document.body.append(new_element);
+  sum_words.appendChild(new_element);
 }
 
 // задание 5: по кругу менять значение id:mode на low/middle/high
@@ -61,36 +61,45 @@ function change_sum() {
 
 // задание 7: вывести четные числа от 0 до 26
 function test_circle() {
+  let even_numbers = [];
   for (let i=0; i<=26; i+=2) {
-  // document.write(i + ' ');
-  console.log(i);
+    even_numbers.push(i);
   }
-
-  // document.getElementById('circle_id').innerHTML = circle;
+  document.getElementById('circle_id').innerHTML = even_numbers;
 }
 
 // задание 8: массивы: объединение, вывод элемента, получение ключей
-function test_mass() {
+function test_array() {
   let arr1 = [1, 2, 3];
   let arr2 = [4, 5, 6];
 
   let result = arr1.concat(arr2);
-  document.getElementById('mass').innerHTML = result;
-
-  let del = result.pop();
-  console.log(del);
-  // new_element.setAttribute("id", "output");
-  // new_element.innerHTML = del;
-  // mass.after(del);
-
+  document.getElementById('array').innerHTML = result;
+  document.getElementById('output').innerHTML = result.pop();
+  
   console.log(Object.keys(result));
-  console.log(Object.keys(del));
+  console.log(Object.keys(result.pop()));
 }
 
 // задание 9: рекурсия: вычислить сумму до данного
-function sum_to(n) {
-  if (n == 1) return 1;
-  return n + sum_to(n - 1);
+function sum_to() {
+  function sum_to(n) {
+    if (n == 1) return 1;
+    return n + sum_to(n - 1);
+  }
+  document.getElementById('recursion').innerHTML = sum_to(5);
 }
 
-console.log(sum_to(5));
+// задание 10: рекурсия: получение чисел Фибоначчи
+function get_numbers() {
+  let first = 0;
+  let second = 1;
+  let numbers = [];
+  for (let i = 1; i <= 10; i++) {
+    let current = first + second;
+    first = second;
+    second = current;
+    numbers.push(current);
+  }
+  document.getElementById('fibonacci').innerHTML = numbers;
+}

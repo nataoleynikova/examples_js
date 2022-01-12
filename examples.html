@@ -1,64 +1,73 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-  <meta charset="UTF-8">
-  <script src="examples.js"></script>
-</head>
-<body>
-  задание 1: увеличивать на 1
-    <br>
-    <div id="int_inc">100</div>
-    <button onclick="increment_int_1()">click</button>
-    <br><br>
+  <head>
+    <meta charset="UTF-8">
+    <script src="examples.js"></script>
+  </head>
 
-  задание 2: уменьшать на 1
-    <br>
-    <div id="int_dec">100</div>
-    <button onclick="decrement_int_2()">click</button>
-    <br><br>
+  <body>
+    задание 1: увеличивать на 1
+      <br>
+      <div id="int_inc">100</div>
+      <button onclick="increment_int_1()">click</button>
+      <br><br>
 
-  задание 3: int_inc + int_dec
-    <br>
-    <div id="sum">0</div>
-    <button onclick="show_sum()">click</button>
-    <br><br>
+    задание 2: уменьшать на 1
+      <br>
+      <div id="int_dec">100</div>
+      <button onclick="decrement_int_2()">click</button>
+      <br><br>
 
-  задание 4: добавлять к слову 1 слово 2
-    <br>
-    <div id="word1">im_word1</div>
-    <div id="word2">im_word2</div>
-    <button onclick="add_word()">click</button>
-    <br><br>
+    задание 3: int_inc + int_dec
+      <br>
+      <div id="sum">0</div>
+      <button onclick="show_sum()">click</button>
+      <br><br>
 
-  задание 5: по кругу менять значение id:mode на
-  low/middle/high
-    <br>
-    <div id="mode">low</div>
-    <button onclick="change_word()">click</button>
-    <br><br>
+    задание 4: добавлять к слову 1 слово 2 при каждом клике
+      <br>
+      <div id="word1">im_word1</div>
+      <div id="word2">im_word2</div>
+      <button id="button" onclick="add_word()">click</button>
+      <div id="sum_words"></div>
+      <br><br>
 
-  задание 6:<br>
-  if mode = low: sum * 1<br>
-  if mode = middle: sum * 2<br>
-  if mode = high: sum * 3
-    <br>
-    <div id="multi">0</div>
-    <button onclick="change_sum()">click</button>
-    <br><br>
-  
-  задание 7: вывести четные числа от 0 до 26<br>
-  <div id="circle_id"></div>
-  <button onclick="test_circle()">click</button>
-  <br><br>
+    задание 5: по кругу менять значение id:mode на
+    low/middle/high
+      <br>
+      <div id="mode">low</div>
+      <button onclick="change_word()">click</button>
+      <br><br>
 
-  задание 8: массивы: объединение, вывод элемента, 
-  получение ключей<br>
-  <div id="mass"></div>
-  <button onclick="test_mass()">click</button>
-  <br><br>
+    задание 6:<br>
+    if mode = low: sum * 1<br>
+    if mode = middle: sum * 2<br>
+    if mode = high: sum * 3
+      <br>
+      <div id="multi">0</div>
+      <button onclick="change_sum()">click</button>
+      <br><br>
+    
+    задание 7: вывести четные числа от 0 до 26<br>
+      <button onclick="test_circle()">click</button>
+      <div id="circle_id"></div>
+      <br><br>
 
-  задание 9: рекурсия: вычислить сумму до данного<br>
-  <div id="rec"></div>
-  <button onclick="sum_to(n)">click</button>
-</body>
+    задание 8: массивы: объединение, вывод элемента, 
+    получение ключей<br>
+      <button onclick="test_array()">click</button>
+      <div id="array"></div>
+      <div id="output"></div>
+      <br><br>
+
+    задание 9: рекурсия: вычислить сумму до данного (5)<br>
+      <button onclick="sum_to()">click</button>
+      <div id="recursion"></div>
+      <br><br>
+
+    задание 10: рекурсия: получение чисел Фибоначчи<br>
+      <button onclick="get_numbers()">click</button>
+      <div id="fibonacci"></div>
+      <br><br>
+  </body>
 </html>
